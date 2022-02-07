@@ -75,7 +75,8 @@ https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$) url 
 # > MIX 解锁高级特权 (需恢复购买)        #hostname = bmall.camera360.com
 ^https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/mix.js
 
-# > spotify 部分解锁premium          #hostname = spclient.wg.spotify.com
+#  部分解锁premium 需iOS15 ,建议重新登录,音质不能设置为超高      #hostname = spclient.wg.spotify.com
+# 1. 搜索界面 歌单/歌曲可以随意切换完全播放  2. 音乐库已点赞歌曲随意切换完全播放
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
 
 # > Notability订阅解锁        #hostname = notability.com
