@@ -91,6 +91,7 @@ https://notability.com/subscriptions url script-response-body https://raw.github
 
 # > 拦截100         #hostname = tagit.hyhuo.com
 ^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/100.js
+https://tagit.hyhuo.com/recover/list url reject
 
 # > 白描黄金会员     #hostname = baimiao.uzero.cn
 ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/baimiao.js
