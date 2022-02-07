@@ -1,49 +1,108 @@
-hostname = musicpay.kuwo.cn, vip1.kuwo.cn, biz.caiyunapp.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, license.pdfexpert.com, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com       
+hostname = musicpay.kuwo.cn, vip1.kuwo.cn, biz.caiyunapp.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, license.pdfexpert.com, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.bilibili.com, app.bilibili.com,api.picsart.c*, api.meiease.c*，weather-data.apple.com,*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,ap?.bilibili.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com   
+# > 克拉壁纸解锁订阅    #hostname = buy.itunes.apple.com
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/ClarityWallpaperProCrack.js
+
+#!name= Replace Apple Weather with 🇺🇸US @waqi.info
+#!desc=切换空气质量数据源为waqi.info，并更改标准为AQI(US)    #hostname = weather-data.apple.com
+^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather.*(?!dataSets=forecastNextHour)(include=.*air_quality.*|dataSets=.*airQuality.*).*(country=[A-Z]{2})?.* url script-response-body https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Apple_Weather.js
+
+# keep解锁会员    #hostname = *.gotokeep.com
+^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/keep.js
+
+# 哔哩哔哩番剧开启1080P+ （by NobyDa）   #hostname=api.bilibili.com, app.bilibili.com,
+^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/bilifj.js
+
+#替换支付宝内淘票票评分为豆瓣评分 #hostname=guide-acs.m.taobao.com
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopshowapi\.getextendshowbyid url script-response-body https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/TaoPiaoPiao/taopiaopiao.js
+
+
+#百度网盘 解锁在线视频倍率/清晰度（by NobyDa）  #hostname= pan.baidu.com
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
+
+#港台番剧自动跳转  #hostname= ap?.bilibili.com
+#^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+#^https:\/\/app\.bilibili\.com\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+
+#微信屏蔽跳转    #hostname=weixin110.qq.com
+#在微信中打开淘宝等被屏蔽链接，点击 Surge/QuantumultX 通知跳转到 Safari 或淘宝 App
+^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/weixin110.js
+
+#去除微信公众号文章底部广告   #hostname= mp.weixin.qq.com
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
 # > 酷我音乐SVIP (By yxiaocai) #hostname = musicpay.kuwo.cn, vip1.kuwo.cn
 ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ url 302 http://musicpay.kuwo.cn/music.pay?uid=2
 ^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/kuwo.js
+
 # > 彩云天气 Svip   #hostname = biz.caiyunapp.com
 ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/caiyun_svip.js
+
 # > VSCO 解锁高级特权   #hostname = vsco.co, api.revenuecat.com,
 ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
+
 # > PS Express解锁高级订阅    #hostname = *.adobe.*
 ^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/photoshop.js
+
+#  PicsArt美易 pro (by NobyDa)    #hostname=api.picsart.c*, api.meiease.c*
+^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/PicsArt.js
+
 # > lightroom    #hostname = photos.adobe.io
 ^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/lightroom.js
-# > 轻颜相机和ulike解锁vip   #hostname = commerce-api.faceu.mobi
+
+# > 轻颜相机和ulike解锁vip    #hostname=commerce-api.faceu.mobi
 ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/ulike.js
+^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/caiyun_svip.js
+
+#网易蜗牛读书 解锁特权     #hostname= p.du.163.com
+^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
+
 # > Documents    #hostname = license.pdfexpert.com
 https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/documents.js
+
 # > Emby解锁     #hostname = mb3admin.com
 ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/iEwha/Profiles/master/Script/EmbyPremiere.js
+
 # > Adguard        #hostname =  mobile-api.adguard.com
 ^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/adguard.js
+
 # > WPS解锁  超级会员、wps会员、稻壳会员 (By eHpo)    #hostname = account.wps.cn
 ^https://account.wps.*/api/users/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
+
 # > VUE Pro  #hostname = api.vuevideo.net
 ^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js
+
 # > 小影 解锁高级功能     #hostname = api-chn.rthdo.com
 ^https:\/\/api-chn\.rthdo\.com\/api\/rest\/u\/vipVerifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/vivavideo.js
+
 # > NiChi 解锁素材    #hostname = m*.bybutter.com
 ^https?:\/\/m(p|ini-hk)\.bybutter\.com\/mood\/(official-templates|privileges) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/NiChi.js
+
 # > 泼辣修图 解锁高级特权 (需恢复购买)    #hostname = api.polaxiong.com
 ^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
+
 # > MIX 解锁高级特权 (需恢复购买)        #hostname = bmall.camera360.com
 ^https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/mix.js
+
 # > spotify 部分解锁premium          #hostname = spclient.wg.spotify.com
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
+
 # > Notability订阅解锁        #hostname = notability.com
 https://notability.com/subscriptions url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/notability.js
+
 # > 拦截100         #hostname = tagit.hyhuo.com
 ^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/100.js
+
 # > 白描黄金会员     #hostname = baimiao.uzero.cn
 ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/baimiao.js
+
 # > 美图秀秀    #hostname = h5.xiuxiu.meitu.com
 ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/mtxx.js
+
 # > 计算器HD     #hostname = www.40sishi.com
 ^https?:\/\/www\.40sishi\.com\/(list|currency|calculator)\/user\/profile$ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/CalculatorHD.js
+
 # > TextEditor     #hostname = buy.itunes.apple.com
 ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/TextEditor.js
+
 # > Hyperweb        #hostname =   zy6kcqa01a.execute-api.us-east-2.amazonaws.com
 ^https://zy6kcqa01a.execute-api.us-east-2.amazonaws.com/prod/verifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/Hyperweb.js
