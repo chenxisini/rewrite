@@ -1,13 +1,10 @@
-hostname = license.pdfexpert.com, rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn,api.bilibili.com, app.bilibili.com, musicpay.kuwo.cn, vip1.kuwo.cn,vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,  mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com 
+hostname =  rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn,api.bilibili.com, app.bilibili.com, musicpay.kuwo.cn, vip1.kuwo.cn,vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,  mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com 
 
 # 哔哩哔哩番剧开启1080P+ （by NobyDa）   #hostname=api.bilibili.com, app.bilibili.com,
 ^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/bilifj.js
 
 # > 克拉壁纸解锁订阅    #hostname = buy.itunes.apple.com
 ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/ClarityWallpaperProCrack.js
-
-# > 027 Document （20201108） by ddgksf2013 #hostname = license.pdfexpert.com
-https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$) url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/documents.js
 
 # keep解锁会员    #hostname = *.gotokeep.com
 ^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/keep.js
