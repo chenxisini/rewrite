@@ -101,6 +101,9 @@ https://tagit.hyhuo.com/recover/list url reject
 # > Hyperweb        #hostname =   zy6kcqa01a.execute-api.us-east-2.amazonaws.com
 ^https://zy6kcqa01a.execute-api.us-east-2.amazonaws.com/prod/verifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/Hyperweb.js
 
-#抖音去广告水印    #hostname = api5-core-c-lf.amemv.com, api3-core-c-lf.amemv.com
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ url script-request-header https://raw.githubusercontent.com/Zhuliyer/ADGai-nai/master/Quantumult%20X/Scripts/Douy.js
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ url script-response-body https://raw.githubusercontent.com/Zhuliyer/ADGai-nai/master/Quantumult%20X/Scripts/Douy.js
+
+# 抖音去广告 (By Choler) 最高支持16.2.0   #hostname = api5-core-c-lf.amemv.com, api3-core-c-lf.amemv.com
+ ^https:\/\/.*\.amemv\.com\/aweme\/v.*\/(feed|post) url script-request-header https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Choler/Script/Aweme.js
+ ^https:\/\/.*\.amemv\.com\/aweme\/v.*\/(feed|post) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Choler/Script/douyin_qx.js
+
+
