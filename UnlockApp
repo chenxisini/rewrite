@@ -1,4 +1,4 @@
-hostname =  rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn,api.bilibili.com, app.bilibili.com, musicpay.kuwo.cn, vip1.kuwo.cn,vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,  mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com，api5-core-c-lf.amemv.com, api3-core-c-lf.amemv.com 
+hostname =  rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn,api.bilibili.com, app.bilibili.com, musicpay.kuwo.cn, vip1.kuwo.cn,vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,  mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com
 
 # 哔哩哔哩番剧开启1080P+ （by NobyDa）   #hostname=api.bilibili.com, app.bilibili.com,
 ^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/bilifj.js
@@ -100,10 +100,3 @@ https://tagit.hyhuo.com/recover/list url reject
 
 # > Hyperweb        #hostname =   zy6kcqa01a.execute-api.us-east-2.amazonaws.com
 ^https://zy6kcqa01a.execute-api.us-east-2.amazonaws.com/prod/verifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/Hyperweb.js
-
-
-# 抖音去广告 (By Choler) 最高支持16.2.0   #hostname = api5-core-c-lf.amemv.com, api3-core-c-lf.amemv.com
- ^https:\/\/.*\.amemv\.com\/aweme\/v.*\/(feed|post) url script-request-header https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Choler/Script/Aweme.js
- ^https:\/\/.*\.amemv\.com\/aweme\/v.*\/(feed|post) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Choler/Script/douyin_qx.js
-
-
