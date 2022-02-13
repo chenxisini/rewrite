@@ -56,7 +56,7 @@ https://api.gotokeep.com/ads/v1/ads/preload url reject
 ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/ulike.js
 ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/caiyun_svip.js
 
-# > Emby解锁     （by zwf234）
+# > Emby解锁   （by zwf234）
 #hostname = mb3admin.com
 ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/zwf234/rules/master/js/Emby.js
 
@@ -68,7 +68,7 @@ https://api.gotokeep.com/ads/v1/ads/preload url reject
 #hostname = account.wps.cn
 ^https://account.wps.*/api/users/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
 
-#VUE Vlog 解锁高级功能 (需登录)   （by NobyDa） 
+#VUE Vlog 解锁高级功能 (需登录) （by NobyDa） 
 #hostname = api.vuevideo.net
 ^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js
 
@@ -84,27 +84,26 @@ https://api.gotokeep.com/ads/v1/ads/preload url reject
 #hostname = api.polaxiong.com
 ^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
 
-# > MIX 解锁高级特权 (需恢复购买)（20220201）     (by ddgksf2013)
+# > MIX 解锁高级特权 (需恢复购买)（20220201）  (by ddgksf2013)
 #hostname = bmall.camera360.com
 ^https:\/\/bmall\.camera360\.com\/api\/(iap\/check-receipt$|mix\/getinfo$) url script-response-body https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/mix.js
 
-#  部分解锁premium 需iOS15 ,建议重新登录,音质不能设置为超高      by(app2smile)
+#  部分解锁premium 需iOS15 ,建议重新登录,音质不能设置为超高    by(app2smile)
 # 1. 搜索界面 歌单/歌曲可以随意切换完全播放 
 # 2. 音乐库已点赞歌曲随意切换完全播放
 #hostname = spclient.wg.spotify.com
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
 
-# > Notability订阅解锁    by(ddgksf2013)
+# > Notability订阅解锁  by(ddgksf2013)
 #hostname = notability.com
 https://notability.com/subscriptions url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/notability.js
 
-# > 拦截100   by(yqc007)
+# > 拦截100  by(yqc007)
 #hostname = tagit.hyhuo.com
-^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100FVIPCrack.js
 https://tagit.hyhuo.com/recover/list url reject
-;^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100SVIPCrack.js
+^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100FVIPCrack.js
 
-# 白描解锁黄金vip     (by sirsunknight)
+# 白描解锁黄金vip  (by sirsunknight)
 #hostname = baimiao.uzero.cn
 ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/sirsunknight/QuantumultX/master/Scripts/Baimiao.js
 
@@ -121,7 +120,7 @@ https://tagit.hyhuo.com/recover/list url reject
 #hostname = www.40sishi.com
 ^https?:\/\/www\.40sishi\.com\/(list|currency|calculator)\/user\/profile$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/CalculatorHDProCrack.js
 
-# TextEditor (2022.01.21)   （by-I-am-R-E）
+# TextEditor (2022.01.21)  （by-I-am-R-E）
 #hostname= buy.itunes.apple.com
 ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/TextEditor.js
 
@@ -133,7 +132,7 @@ https://tagit.hyhuo.com/recover/list url reject
 #hostname = api.meiease.cn
 ^https?:\/\/api\.meiease\.cn\/shop\/subscription\/validate url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Picsart.js
 
-# keep解锁会员    (by zwf234)
+# keep解锁会员  (by zwf234)
 #hostname = *.gotokeep.com
 ^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/keep.js
 
@@ -141,12 +140,12 @@ https://tagit.hyhuo.com/recover/list url reject
 #hostname=guide-acs.m.taobao.com
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopshowapi\.getextendshowbyid url script-response-body https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/TaoPiaoPiao/taopiaopiao.js
 
-#微信屏蔽跳转    (by zwf234)
+#微信屏蔽跳转   (by zwf234)
 #hostname=weixin110.qq.com
 #在微信中打开淘宝等被屏蔽链接，点击 Surge/QuantumultX 通知跳转到 Safari 或淘宝 App
 ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/weixin110.js
 
-#去除微信公众号文章底部广告   （by NobyDa）
+#去除微信公众号文章底部广告  （by NobyDa）
 #hostname= mp.weixin.qq.com
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
@@ -157,6 +156,4 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 #网易蜗牛读书 解锁特权    (by NobyDa)
 #hostname= p.du.163.com
 ^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
-
-
 
