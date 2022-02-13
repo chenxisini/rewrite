@@ -1,12 +1,14 @@
-hostname = gw.aoscdn.com , musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn, api.gotokeep.com, api.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com
+hostname = gw.aoscdn.com ,musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me, api.gotokeep.com, api.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com
 
 # 傲软抠图解锁会员 (by yqc007）
 #hostname = gw.aoscdn.com
 ^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/BackgroundEraserProCrack.js
 
-#hostname = musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn
+#hostname = musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me
 # ～ KWYY_酷我聽書Block_ad@ddgksf2013
 https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright url reject-dict
+# ～ KWYY_酷我聽書PayInfo@ddgksf2013
+https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/kwyy.js
 # ～ KWYY_酷我聽書PayInfo@ddgksf2013
 ^https?:\/\/audiobookpay\.kuwo\.cn/a\.p url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/kwyy.js
 # ～ KWYY_酷我聽書UserInfo@ddgksf2013
