@@ -1,4 +1,17 @@
-hostname = gw.aoscdn.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,api.gotokeep.com, api.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com
+hostname = *.itaoxiaoshuo.com, *.taoyuewenhua.com, *.zhuishushenqi.com , gw.aoscdn.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,api.gotokeep.com, api.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com
+
+# 淘小说（David）
+#hostname = *.itaoxiaoshuo.com, *.taoyuewenhua.com,
+http://ap.taoyuewenhua.com/ajax/lottery/wheel/draw url script-request-header https://raw.githubusercontent.com/bluesmallpig/scripts/main/txs.js
+https://tybook.ios.itaoxiaoshuo.com/auth/v3/rt url script-request-header https://raw.githubusercontent.com/bluesmallpig/scripts/main/txs.js
+
+# 追书神器（David）
+#hostname =  *.zhuishushenqi.com
+https://sensorspop.zhuishushenqi.com/api/v2/sfo/user_popup_configs url script-request-header https://raw.githubusercontent.com/bluesmallpig/scripts/main/zssq.js
+https://goldcoin.zhuishushenqi.com/account/open-app url script-request-header https://raw.githubusercontent.com/bluesmallpig/scripts/main/zssq.js
+https://goldcoin.zhuishushenqi.com/thirdpartypromotion/v2/getAllPromotion url script-request-header https://raw.githubusercontent.com/bluesmallpig/scripts/main/zssq.js
+http://goldcoinnew.zhuishushenqi.com/redPacket/incentiveVideo url script-request-body https://raw.githubusercontent.com/bluesmallpig/scripts/main/zssq.js
+https://goldcoin.zhuishushenqi.com/v3/shitu/bind-promoter url script-request-header https://raw.githubusercontent.com/bluesmallpig/scripts/main/zssq.js
 
 # 傲软抠图解锁会员 (by yqc007）
 #hostname = gw.aoscdn.com
