@@ -1,4 +1,4 @@
-hostname = gw.aoscdn.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,api.gotokeep.com, api.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com
+hostname = gw.aoscdn.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,api.gotokeep.com,api*.amemv.com,aweme.snssdk.com ,pi.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com
 
 # 傲软抠图解锁会员 (by yqc007）
 #hostname = gw.aoscdn.com
@@ -35,6 +35,21 @@ https?:\/\/tingshu\.kuwo\.cn\/v2\/api\/pay\/vip\/extraVipStatus url script-respo
 #hostname=api.gotokeep.com
 https://api.gotokeep.com/op-engine-webapp/v1/ad url reject
 https://api.gotokeep.com/ads/v1/ads/preload url reject
+
+# 抖音去广告去水印 (By Choler)
+#hostname = api*.amemv.com,aweme.snssdk.com
+^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/aweme\/v\d+\/aweme\/(detail|stats)\/ url reject
+^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/aweme\/v\d+\/(familiar|social|upload|language|play\/stats|post|poi|settings|rate|platform|app|im|device|newyear|ttregion|check|compliance|anchor|commerce|abtest)\/ url reject-dict
+^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/(vapp\/inner_ad|ies|jssdk_signature|log|effect|collect|service|location|client_impr|monitor)\/ url reject-dict
+^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/api\/v\d+\/data\/ url reject-dict
+^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/(amazing|cloudpush|growth|activity|share_strategy|tfe)\/ url reject
+^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/\d+\/status\/ url reject-dict
+^https?:\/\/x?log.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/ url reject-dict
+^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/v\d+\/getInfo url reject-dict
+^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/model\/api\/arithmetics url reject-dict
+
+https?:\/\/(.+?)\.amemv\.com\/aweme\/v2\/feed\/ url request-header GET \/aweme\/v\d\/(.+\r\n) request-header GET /aweme/v1/$1
+https?:\/\/(.+?)\.amemv\.com\/aweme\/v\d\/feed\/ url script-response-body https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js
 
 # 哔哩哔哩番剧开启1080P+ （by NobyDa）  
 #hostname=api.bilibili.com, app.bilibili.com,
