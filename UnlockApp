@@ -3,7 +3,7 @@ hostname = gw.aoscdn.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpa
 # Youtube 简体字幕  （by-id77）
 #hostname= www.youtube.com
 // 重写，简体；
-https:\/\/www.youtube.com\/api\/timedtext\?.+&lang=(?!zh)((?!&tlang=zh\-Hans).)*$ url request-header \sHTTP/1\.1(\r\n) request-header &tlang=zh-Hans HTTP/1.1$1
+https:\/\/www.youtube.com\/api\/timedtext\?.+&lang=(?!(zh|zh\-Hans)&)((?!&tlang=zh\-Hans).)*$ url request-header \sHTTP/1\.1(\r\n) request-header &tlang=zh-Hans HTTP/1.1$1
 
 # 傲软抠图解锁会员 (by yqc007）
 #hostname = gw.aoscdn.com
