@@ -47,17 +47,17 @@ https://api.gotokeep.com/ads/v1/ads/preload url reject
 
 # > VSCO 解锁高级特权  （by NobyDa） 
 #hostname = vsco.co, api.revenuecat.com,
-^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
+^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js
 
 # > Photoshop（20210321） by ddgksf2013
 #hostname = *.adobe.*
 ^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/ps.js
 
-# > lightroom   
+# > lightroom   by-ieha
 #hostname = photos.adobe.io
 ^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/lightroom.js
 
-# > 轻颜相机和ulike解锁vip   
+# > 轻颜相机和ulike解锁vip      by-ieha
 #hostname=commerce-api.faceu.mobi
 ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/ulike.js
 ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/caiyun_svip.js
@@ -66,7 +66,7 @@ https://api.gotokeep.com/ads/v1/ads/preload url reject
 #hostname = mb3admin.com
 ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/zwf234/rules/master/js/Emby.js
 
-#Adguard premium
+#Adguard premium    by-ieha
 #hostname = mobile-api.adguard.com
 ^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/adguard.js
 
@@ -150,8 +150,6 @@ https://tagit.hyhuo.com/recover/list url reject
 #微信屏蔽跳转   (by zwf234)
 #hostname=weixin110.qq.com
 #在微信中打开淘宝等被屏蔽链接，点击 Surge/QuantumultX 通知跳转到 Safari 或淘宝 App
-
-
 ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/weixin110.js
 
 #去除微信公众号文章底部广告  （by NobyDa）
@@ -166,6 +164,6 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 #hostname= p.du.163.com
 ^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
 
-#百度防跳转 
+#百度防跳转    by-app2smile
 #hostname=boxer.baidu.com
 ^https:\/\/boxer\.baidu\.com\/scheme\?scheme url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
