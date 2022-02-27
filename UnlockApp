@@ -5,7 +5,7 @@ hostname = weather-data.apple.com , gw.aoscdn.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,
 #hostname = weather-data.apple.com
 ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather.*(?!dataSets=forecastNextHour)(include=.*air_quality.*|dataSets=.*airQuality.*).*(country=[A-Z]{2})?.* url script-response-body https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Apple_Weather.js
 
-# Youtube 简体字幕  （by-id77）
+# Youtube 简体字幕  （by-id77）需配合捷径：https://www.icloud.com/shortcuts/b3e2494fca0c4c40ad57625a5607eb82 使用。
 #hostname= www.youtube.com
 // 简体；订阅链接后面加上 #out=Hant 后开启资源解析器
 // https://raw.githubusercontent.com/id77/QuantumultX/master/rewrite/Youtube_CC.conf#out=Hant
