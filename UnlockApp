@@ -131,10 +131,6 @@ https://tagit.hyhuo.com/recover/list url reject
 #hostname= buy.itunes.apple.com
 ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/TextEditor.js
 
-# > 克拉壁纸解锁订阅   (by yqc007)
-#hostname = buy.itunes.apple.com
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/ClarityWallpaperProCrack.js
-
 # > Picsart美易(2022.01.21) (by I-am-R-E)
 #hostname = api.meiease.cn
 ^https?:\/\/api\.meiease\.cn\/shop\/subscription\/validate url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Picsart.js
