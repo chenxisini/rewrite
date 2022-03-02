@@ -1,4 +1,4 @@
-hostname = weather-data.apple.com , gw.aoscdn.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,pi.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com,guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com,p.du.163.com,boxer.baidu.com
+hostname = weather-data.apple.com , gw.aoscdn.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,pi.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com,guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com,p.du.163.com,boxer.baidu.com,*.baidu.com,www.google.com,www.google.com.*,*\.google\.*
 
 #!name= Replace Apple Weather with 🇺🇸US @waqi.info
 #!desc=切换空气质量数据源为waqi.info，并更改标准为AQI(US)
@@ -160,6 +160,32 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 #hostname= p.du.163.com
 ^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
 
+#百度系列
+
 #百度防跳转    by-app2smile
 #hostname=boxer.baidu.com
 ^https:\/\/boxer\.baidu\.com\/scheme\?scheme url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
+#百度搜索防跳转  
+#hostname = *.baidu.com
+^https?:\/\/.*\.baidu\.com url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)$2
+
+#谷歌系
+
+# 阻止google.com 跳转到google.com.hk
+^https?:\/\/(www.)?(g|google)\.cn url 302 https://www.google.com
+^https?:\/\/(ditu|maps).google\.cn url 302 https://maps.google.com
+# 关闭谷歌安全搜索
+#hostname = www.google.com,www.google.com.*
+(https:\/\/www\.google\.com([.a-z]+)?\/.+)(&safe=strict&)(.+) url 302 $1&safe=off
+https://www\.google\.com\.hk\/search\?q=([\w.]+)&.+ url 302 https://www.google.com.sg/search?q=$1&safe=off
+# google 翻页 (senku)
+https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/endless.js
+# content Farm Adblock 屏蔽内容农场
+#hostname = *\.google\.*
+(google)(?!.*?(\.css.*|\.js.*|\.jpeg|cdn-cgi|\.ico|\.png|\.gif)).* url response-body </body> response-body <link rel="stylesheet" href="https://limbopro.com/CSS/contentFarm.css"><script  src="https://limbopro.com/Adguard/contentFarm/contentFarm.js"></script></body>
+# Redirect Google Search Service
+^https?:\/\/(www.)?(g|google)\.cn url 302 https://www.google.com
+# Redirect Google Maps Service
+^https?:\/\/(ditu|maps).google\.cn url 302 https://maps.google.com
+# cn => com
+https?://www.google.cn url 302 https://www.google.com
