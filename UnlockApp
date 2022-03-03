@@ -1,4 +1,4 @@
-hostname = weather-data.apple.com , gw.aoscdn.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,pi.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com,guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com,p.du.163.com,boxer.baidu.com,*.baidu.com,zhidao.baidu.com,jump2.bdimg.com,www.google.com,www.google.com.*,*\.google\.*
+hostname = weather-data.apple.com , gw.aoscdn.com,api.tidal.com,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,pi.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com,guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com,p.du.163.com,boxer.baidu.com,*.baidu.com,zhidao.baidu.com,jump2.bdimg.com,www.google.com,www.google.com.*,*\.google\.*
 
 #!name= Replace Apple Weather with 🇺🇸US @waqi.info
 #!desc=切换空气质量数据源为waqi.info，并更改标准为AQI(US)
@@ -14,6 +14,10 @@ https:\/\/www.youtube.com\/api\/timedtext\?.+&lang=(?!(zh|zh\-Hans)&)((?!&tlang=
 # 傲软抠图解锁会员 (by yqc007）
 #hostname = gw.aoscdn.com
 ^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/BackgroundEraserProCrack.js
+
+# > TIDAL解锁HiFi Plus (by yqc007）
+#hostname = api.tidal.com
+^https?:\/\/api\.tidal\.com\/v1\/(pages\/album|(user|track|page)s\/(\d+)\/(state|subscription|lyrics|onboarding|playbackinfopostpaywall)) url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/TIDALHiFiPlusCrack.js
 
 # 酷我(20220213) @ddgksf2013
 #hostname = rich.kuwo.cn, *.kwcdn.kuwo.cn, mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn, omp-audiobookpay.lrts.me, 
