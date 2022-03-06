@@ -1,4 +1,4 @@
-hostname = weather-data.apple.com , gw.aoscdn.com, api.lightricks.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,pi.bilibili.com, app.bilibili.com, vsco.co, api.revenuecat.com, *.adobe.*,photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com,guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com,p.du.163.com,boxer.baidu.com,*.baidu.com,zhidao.baidu.com,jump2.bdimg.com,www.google.com,www.google.com.*,*\.google\.*
+hostname = weather-data.apple.com , gw.aoscdn.com, api.lightricks.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,vsco.co, api.revenuecat.com, *.adobe.*,photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com,guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com,p.du.163.com,boxer.baidu.com,*.baidu.com,zhidao.baidu.com,jump2.bdimg.com,www.google.com,www.google.com.*,*\.google\.*
 
 #!name= Replace Apple Weather with 🇺🇸US @waqi.info
 #!desc=切换空气质量数据源为waqi.info，并更改标准为AQI(US)
@@ -48,10 +48,10 @@ https?:\/\/tingshu\.kuwo\.cn\/v2\/api\/pay\/vip\/extraVipStatus url script-respo
 
 # 哔哩哔哩番剧开启1080P+ （by NobyDa）  
 #hostname=api.bilibili.com, app.bilibili.com,
-^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/bilifj.js
+#^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/bilifj.js
 
 # > VSCO 解锁高级特权  （by NobyDa） 
-#hostname = vsco.co, api.revenuecat.com,
+#hostname = vsco.co,api.revenuecat.com,
 ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js
 
 # > Photoshop（20210321） (by ddgksf2013)
