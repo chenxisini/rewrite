@@ -1,4 +1,4 @@
-hostname = weather-data.apple.com , gw.aoscdn.com, api.lightricks.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,vsco.co, api.revenuecat.com, *.adobe.*,photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn, *.gotokeep.com,guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com,p.du.163.com,boxer.baidu.com,*.baidu.com,zhidao.baidu.com,jump2.bdimg.com,www.google.com,www.google.com.*,*\.google\.*
+hostname = weather-data.apple.com , gw.aoscdn.com, api.lightricks.com ,rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,vsco.co, api.revenuecat.com, *.adobe.*,photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn,guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com,p.du.163.com,boxer.baidu.com,*.baidu.com,zhidao.baidu.com,jump2.bdimg.com,www.google.com,www.google.com.*,*\.google\.*
 
 #!name= Replace Apple Weather with 🇺🇸US @waqi.info
 #!desc=切换空气质量数据源为waqi.info，并更改标准为AQI(US)
@@ -138,10 +138,6 @@ https://tagit.hyhuo.com/recover/list url reject
 # > Picsart美易(2022.01.21) (by I-am-R-E)
 #hostname = api.meiease.cn
 ^https?:\/\/api\.meiease\.cn\/shop\/subscription\/validate url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Picsart.js
-
-# keep解锁会员  (by zwf234)
-#hostname = *.gotokeep.com
-^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/keep.js
 
 #替换支付宝内淘票票评分为豆瓣评分 (by Peng-YM)
 #hostname=guide-acs.m.taobao.com
