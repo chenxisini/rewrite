@@ -1,12 +1,9 @@
-hostname = weather-data.apple.com,www.pianku.li,gw.aoscdn.com, api.lightricks.com, rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,vsco.co,api.revenuecat.com, *.adobe.*,photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn,guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com,p.du.163.com,boxer.baidu.com,*.baidu.com,zhidao.baidu.com,jump2.bdimg.com,www.google.com,www.google.com.*,*\.google\.*
+hostname = weather-data.apple.com, gw.aoscdn.com, api.lightricks.com, rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn,omp-audiobookpay.lrts.me,vsco.co,api.revenuecat.com, *.adobe.*,photos.adobe.io, commerce-api.faceu.mobi, mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net, xy-viva.kakalili.com, m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,notability.com,tagit.hyhuo.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, api.account.meitu.com, api.meiyan.com, www.40sishi.com, buy.itunes.apple.com,api.meiease.cn,guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com,p.du.163.com,boxer.baidu.com,*.baidu.com,zhidao.baidu.com,jump2.bdimg.com,www.google.com,www.google.com.*,*\.google\.*
 
 #!name= Replace Apple Weather with 🇺🇸US @waqi.info
 #!desc=切换空气质量数据源为waqi.info，并更改标准为AQI(US)
 #hostname = weather-data.apple.com
 ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather.*(?!dataSets=forecastNextHour)(include=.*air_quality.*|dataSets=.*airQuality.*).*(country=[A-Z]{2})?.* url script-response-body https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Apple_Weather.js
-
-##### www.pianku.li 片库网
-^https:?/\/.*\.(mypianku|pianku)\..* url response-body </body> response-body <link rel="stylesheet" href="https://limbopro.com/CSS/mypianku.css" type="text/css"><script type="text/javascript" src="//limbopro.com/Adguard/mypianku.js"></script></body>
 
 # Youtube 简体字幕  （by-id77）需配合捷径：https://www.icloud.com/shortcuts/b3e2494fca0c4c40ad57625a5607eb82 使用。
 #hostname= www.youtube.com
