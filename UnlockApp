@@ -173,8 +173,8 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 #hostname= p.du.163.com
 ^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
 
-#百度系
-#百度      #hostname=zhidao.baidu.com,jump2.bdimg.com
+#百度     
+#hostname=zhidao.baidu.com,jump2.bdimg.com
 #百度贴吧重定向
 ^https?+:\/\/(?:c\.)?+tieba\.baidu\.com\/(?>f|p) url request-header (\r\n)User-Agent:.+ request-header $1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15
 ^https?+:\/\/jump2\.bdimg\.com\/(?>f|p) url request-header (\r\n)User-Agent:.+ request-header $1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15
