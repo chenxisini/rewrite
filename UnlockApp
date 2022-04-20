@@ -169,9 +169,11 @@ https://tagit.hyhuo.com/recover/list url reject
 #hostname= mp.weixin.qq.com
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
-#百度网盘 解锁在线视频倍率/清晰度  （by NobyDa）  
+#百度网盘 解锁在线视频倍率/清晰度  
 #hostname= pan.baidu.com
-https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
+# > 百度云 by ddgksf2013
+https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js
+
 
 #网易蜗牛读书 解锁特权    (by NobyDa)
 #hostname= p.du.163.com
