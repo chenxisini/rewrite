@@ -2,7 +2,7 @@
 [rewrite_local]
 
 # ～ 百度文库☆解锁VIP文档阅读权限（2022-10-17）@ddgksf2013
-^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/baidulibrary.js
+^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://raw.githubusercontent.com/chenxisini/rewrite/main/baidulibrary.js
 
 [mitm]
 
